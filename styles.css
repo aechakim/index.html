@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(lifee.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover
+ 
+}
+
+.logo{
+     height: 200px;
+     width: 200px;   
+
+}
+
+nav{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-right: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 15% 15px;
+}
+
+nav ul li{
+    text-decoration: none;
+    color: rgba(90, 227, 104, 0.609);
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: rgba(90, 227, 104, 0.609);
+}
+
+.detel{
+    margin-left: 8%;
+    margin: 13%;
+
+}
+
+.detel h1{
+    font-size: 50x;
+    color: rgba(65, 187, 77, 0.677);
+    margin-bottom: 20px;
+}
+
+span{
+    color:orange;
+}
+
+.detel p{
+    color: #f3eded;
+    line-height: 22px;
+}
+
+.images{
+    width: 80%;
+    height: 50%;
+    position:absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    transition: bottom 1s left 1s;
+}
+
+.images:hover .shape{
+   bottom: 40px;
+}
+
+.images:hover .girl{
+    left:45%
+}
+
+body {
+    background: black;
+}
+
+.clock {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #964adb;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
+}
