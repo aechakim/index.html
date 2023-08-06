@@ -6,8 +6,8 @@
 
 .hero{
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 103%;
+    height: 120vh;
     background-image: url(lifee.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -105,7 +105,102 @@ body {
     font-size: 60px;
     font-family: Orbitron;
     letter-spacing: 7px;
-   
-
-
 }
+
+
+
+
+
+
+
+
+
+.army-bomb-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-30%);
+  }
+  
+  .handle {
+    position: relative;
+    height: 200px;
+    width: 50px;
+    background-color: black;
+    z-index: 0;
+  }
+  
+  /* top of the army bomb drawn using pseudo elements on the handle (so that it is drawn behind the glowing animation) */
+  .handle:before {
+    position: absolute;
+    left: 132.5%;
+    top: -30%;
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(45deg);
+    z-index: -1;
+    content: "";
+  }
+  
+  .handle:after {
+    position: absolute;
+    left: 168.5%;
+    top: -31.5%;
+    width: 3px;
+    height: 5px;
+    background-color: red;
+    transform: rotate(45deg);
+    z-index: -1;
+    content: "";
+  }
+  
+  .army-bomb {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);  
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 75px;
+    animation: light-up 3s infinite ease-in-out;
+  }
+  
+  /* BTS logo drawn using pseudo elements of the army bomb */
+  .army-bomb::before {
+    position: absolute;
+    top: 160%;
+    left: 34%;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 15px;
+    transform: rotate(90deg);
+    content: "";
+  }
+  
+  .army-bomb::after {
+    position: absolute;
+    top: 160%;
+    right: 34%;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 15px;
+    transform: rotate(-90deg);
+    content: "";
+  } 
+  
+  
+  /* glowing animation */
+  @keyframes light-up {
+    0%   { box-shadow: 0px 0px 50px 1px rgb(244, 242, 244); }
+    50%  { box-shadow: 0px 0px 50px 30px rgb(179, 91, 209); }
+    100% { box-shadow: 0px 0px 50px 1px rgb(99, 213, 99); }
+    
+  }
+
+
+ 
