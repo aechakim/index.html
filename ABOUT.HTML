@@ -15,25 +15,82 @@ body {
 }
 
 
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #227041cf;
+  color: white;
+  transform: rotateY(180deg);
+}
 </style>
-
-</nav>
-<div class="detel">
-
-<h1>HI my name is Alexis Nicole Abraham
-<h1>Im 19 years old
-<h1>From Paniqui Tarlac
-<h1>My Zodiac Sign is Gemini
-<h1>Im studying at Tarlac Agricultural University
-<h1>2nd Year and my course is BACHELOR OF SCIENCE IN AGRICULTURE
+</head>
+<body>
 
 
-  <h2>
-    btw when i was elementery and Junior Hishschool my ambition is become an ARMY CRIMINOLOGY
-  <h2>
-    but when im in Senior Highschool i realize that i want become Computer Engineering and I want IT course 
-  <h2>
-    so i decided to apply that course in TAU but i didn't have slot so I move in Agriculture course
+
+<h1>Hi! my name is ALEXIS NICOLE ABRAHAM</h1>
+<h3>click the image for more info.</h3>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="raven.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <p>Im 19 years old</p> 
+      <p>From Paniqui Tarlac</p>
+      <p>My Zodiac Sign is Gemini</p>
+      <p>Im currently studying at Tarlac Agricultural University</p>
+      <p>2nd Year and my course is BACHELOR OF SCIENCE IN AGRICULTURE</p>
+      <p>AND IM A FANGIRL</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+  <P> btw when i was Elementery and Junior Hishschool my ambition is become an ARMY/CRIMINOLOGY</P>
+  <P>but when im in Senior Highschool I realize that I want become Computer Engineering and I want IT course </P>
+  <P> so i decided to apply that course in TAU but i didn't have slot so I move in Agriculture course</P>
+   
 
 
     <head>
@@ -44,20 +101,184 @@ body {
 
 
 
-  <style>
-    .detel{
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    font-weight: bold;
-    margin-left: 8%;
-    margin: 5%;
-    font-size: 10px;
-    display: block;
-    padding: 25px 20px;
-    color: rgba(19, 18, 19, 0.922);
-    margin-bottom: 20px;
-}
 
+
+
+
+   
+<style>
+
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    background: #d3ded5b8;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgb(42, 40, 40);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: rgb(0, 0, 0);}
+  </style>
+  </head>
+  <body>
+  
+  <div class="slideshow-container">
+  
+  <div class="mySlides">
+    <q>I AM THE CREATOR OF MY OWN REALITY</q>
+    
+  </div>
+  
+  <div class="mySlides">
+    <q>TAKE ME BACK TO THE NIGHT WE MET</q>
+    
+  </div>
+  
+  <div class="mySlides">
+    <q>SOMETIMES YOU MISS THE MEMORIES...NOT THE PERSON.</q>
+  </div>
+  
+  <div class="mySlides">
+    <q>THE MOST PAINFUL GOODBYES ARE THE ONES UNEXPLAINED</q>
+  </div>
+
+  <div class="mySlides">
+    <q>Thankyou for using me as your Temporary Happiness</q>
+  </div>
+
+  <div class="mySlides">
+    <q>Music is my Escape from Reality.</q>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  </body>
+  </html> 
+  
+    
+
+  
+
+
+
+
+
+
+
+  
 
 
     
